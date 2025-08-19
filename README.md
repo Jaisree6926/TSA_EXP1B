@@ -43,27 +43,39 @@ To perform regular differncing,seasonal adjustment and log transformatio on inte
     plt.ylabel('Sales')
     
     plt.subplot(4, 1, 2)
-    plt.plot(sales_data['sales_log'], label='Log of Sales')
+    plt.plot(sales_data['sales_log'], label='Regular Difference')
     plt.legend(loc='best')
-    plt.title('Log Transformation')
+    plt.title('Regular Difference')
     plt.xlabel('Date')
     plt.ylabel('Log(Sales)')
     
     plt.subplot(4, 1, 3)
     plt.plot(sales_data['sales_log_diff'], label='Diff(Log(Sales))')
     plt.legend(loc='best')
-    plt.title('First Difference of Log Sales')
+    plt.title('Seasonal Adjustment')
     plt.xlabel('Date')
     plt.ylabel('Diff(Log(Sales))')
     
     plt.subplot(4, 1, 4)
-    plt.plot(sales_data['sales_log_seasonal_diff'], label='Seasonal Diff of Differenced Log Sales')
+    plt.plot(sales_data['sales_log_seasonal_diff'], label='Log Transformation')
     plt.legend(loc='best')
-    plt.title('Seasonal Differencing of Differenced Log Sales (Weekly)')
+    plt.title('Log Transformation')
     plt.xlabel('Date')
     plt.ylabel('SDiff(RDiff(Log(Sales)))')
     
     plt.tight_layout()
+    plt.show()
+    
+    plt.figure(figsize=(12, 6))
+    plt.plot(sales_data['sales'], label='Original Sales', alpha=0.7)
+    plt.plot(sales_data['sales_log'], label='Log Sales', alpha=0.7)
+    plt.plot(sales_data['sales_log_diff'], label='Diff(Log Sales)', alpha=0.7)
+    plt.plot(sales_data['sales_log_seasonal_diff'], label='Seasonal Diff(Diff(Log Sales))', alpha=0.7)
+    plt.title('Overview of Sales Data Transformations')
+    plt.xlabel('Date')
+    plt.ylabel('Value')
+    plt.legend(loc='best')
+    plt.grid(True)
     plt.show()
    
 
@@ -71,24 +83,27 @@ To perform regular differncing,seasonal adjustment and log transformatio on inte
 ### OUTPUT:
 
 **Original Sales Data:**
-
-<img width="1322" height="269" alt="Screenshot (189)" src="https://github.com/user-attachments/assets/d2e79d20-8bc1-41e6-9ec4-4da3fd39daa3" />
-
-
-**Log Transformation:**
-
-<img width="1351" height="274" alt="Screenshot (190)" src="https://github.com/user-attachments/assets/7c715721-d1e6-465e-9f27-ea6f8145a301" />
+<img width="1293" height="332" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/cbeba13c-e3fe-493c-a7b7-06ed445bf0c3" />
 
 
-**First difference of log sales:**
+**Regular Difference:**
 
-<img width="1333" height="277" alt="Screenshot (191)" src="https://github.com/user-attachments/assets/76aac7ae-0eee-4467-b5fa-534ad8eed581" />
+<img width="1324" height="301" alt="Screenshot (3)" src="https://github.com/user-attachments/assets/3c7c94a0-b537-4911-b842-733f3a0267f1" />
 
 
-**seasonal differences of Differenced log sales (weekly)**
+**Seasonal Adjustment:**
 
-<img width="1385" height="251" alt="Screenshot (194)" src="https://github.com/user-attachments/assets/77c305ed-33d8-4798-81df-e3615da8dfb8" />
 
+<img width="1304" height="310" alt="Screenshot (4)" src="https://github.com/user-attachments/assets/f3a9024d-6be4-4b7a-8fab-c88f2deed932" />
+
+
+**Log Transformation**
+
+<img width="1312" height="318" alt="Screenshot (5)" src="https://github.com/user-attachments/assets/63d6db51-ae53-48bc-bcde-c9ef64b451da" />
+
+**Overview of Sales Data Transformations:**
+
+<img width="1320" height="715" alt="Screenshot (6)" src="https://github.com/user-attachments/assets/4740af37-7dbe-4173-bfe9-6b4bb089dcc5" />
 
 
 ### RESULT:
