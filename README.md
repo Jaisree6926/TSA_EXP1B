@@ -65,7 +65,7 @@ To perform regular differncing,seasonal adjustment and log transformatio on inte
     
     plt.tight_layout()
     plt.show()
-    data.plot(kind='line')
+   
 
 
 ### OUTPUT:
@@ -89,9 +89,7 @@ To perform regular differncing,seasonal adjustment and log transformatio on inte
 
 <img width="1385" height="251" alt="Screenshot (194)" src="https://github.com/user-attachments/assets/77c305ed-33d8-4798-81df-e3615da8dfb8" />
 
-**Overall view:**
 
-<img width="964" height="551" alt="Screenshot (193)" src="https://github.com/user-attachments/assets/537afba3-eb0d-47e2-b61d-b1d7385fc52c" />
 
 ### RESULT:
 Thus we have created the python code for the conversion of non stationary to stationary data on international airline passenger
